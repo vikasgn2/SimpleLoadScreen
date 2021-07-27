@@ -1,0 +1,51 @@
+<section class="loading">											<!--Loading screen message-->
+	This is a loading screen
+	<span class="subtext">										<!--Sub Message-->
+		The Circle rotates!<br>
+	</span>
+	<span class="anim">												<!--Animation Class-->
+	</span>
+</section>
+
+<style>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Bahnschrift";
+}
+
+.loading {
+   max-width: 50%;
+   line-height: 1.4;
+   font-size: 1.2rem;
+   font-weight: bold;
+   text-align: center;
+}
+
+.subtext {
+  font-weight: normal;
+  font-size: 0.9rem;
+  color: rgba(189,189,189 ,1);
+  margin: 0.6rem 0 2rem 0;
+  display: block;
+}
+
+.anim {
+  width: 60px;
+  height: 60px;
+  border:  5px solid rgba(189,189,189 ,0.25);
+  border-left-color: rgba(28, 46, 148 ,1);
+  border-top-color: rgba(28, 46, 148, 1);
+  border-radius: 50%;
+  display: inline-block;
+  animation: rotate 600ms infinite linear;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(1turn)
+  }
+}
+</style>
