@@ -1,14 +1,17 @@
-<section class="loading">				<!--Loading screen message-->
-	This is a loading screen
-	<span class="subtext">				<!--Sub Message-->
-		The Circle rotates!<br>
-	</span>
-	<span class="anim">				<!--Animation Class-->
-	</span>
+<section class="loading">                         <!--Loading screen message-->
+  	This is a loading screen
+    	<span class="subtext">				              <!--Sub Message-->
+        		The Circle rotates and there's dark mode!<br>
+      </span>
+	    <span class="anim">				                  <!--Animation Class-->
+	    </span><br><br>
+	  <button onclick="fun()">Dark mode</button>	
 </section>
 
-<style>							
-body {
+<style>
+/*Inline CSS*/
+body
+{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,15 +19,23 @@ body {
   font-family: "Bahnschrift";
 }
 
-.loading {
-   max-width: 50%;
-   line-height: 1.4;
-   font-size: 1.2rem;
-   font-weight: bold;
-   text-align: center;
+.loading
+{
+  max-width: 50%;
+  line-height: 1.4;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
 }
 
-.subtext {
+.dark-mode                                         /*Dark Mode Toggle*/
+{
+  background-color: black;
+  color: white;
+}
+
+.subtext
+{
   font-weight: normal;
   font-size: 0.9rem;
   color: rgba(189,189,189 ,1);
@@ -32,8 +43,8 @@ body {
   display: block;
 }
 
-
-.anim {							/*Animated Cirlce properties*/
+.anim                                             /*Animated Cirlce properties*/
+{							
   width: 60px;
   height: 60px;
   border:  5px solid rgba(189,189,189 ,0.25);
@@ -42,11 +53,23 @@ body {
   border-radius: 50%;
   display: inline-block;
   animation: rotate 600ms infinite linear;
-} 
+}
 
-@keyframes rotate {				     /*Function to rotate*/
-  to {
+@keyframes rotate
+{
+  /*Function to rotate*/
+  to
+  {
     transform: rotate(1turn)
   }
 }  
 </style>
+
+<script>
+  function fun()
+  {
+    //Inline JavaScript
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+  }
+</script>
